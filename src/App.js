@@ -4,22 +4,22 @@ import './App.css';
 function App() {
   // Estado para las cartas del memorama (8 pares)
   const [cards, setCards] = useState([
-    { id: 1, value: 'A', isFlipped: false, image: '/images/cardA.png' },
-    { id: 2, value: 'B', isFlipped: false, image: '/images/cardB.png' },
-    { id: 3, value: 'A', isFlipped: false, image: '/images/cardA.png' },
-    { id: 4, value: 'B', isFlipped: false, image: '/images/cardB.png' },
-    { id: 5, value: 'C', isFlipped: false, image: '/images/cardC.png' },
-    { id: 6, value: 'D', isFlipped: false, image: '/images/cardD.png' },
-    { id: 7, value: 'C', isFlipped: false, image: '/images/cardC.png' },
-    { id: 8, value: 'D', isFlipped: false, image: '/images/cardD.png' },
-    { id: 9, value: 'E', isFlipped: false, image: '/images/cardE.png' },
-    { id: 10, value: 'F', isFlipped: false, image: '/images/cardF.png' },
-    { id: 11, value: 'E', isFlipped: false, image: '/images/cardE.png' },
-    { id: 12, value: 'F', isFlipped: false, image: '/images/cardF.png' },
-    { id: 13, value: 'G', isFlipped: false, image: '/images/cardG.png' },
-    { id: 14, value: 'H', isFlipped: false, image: '/images/cardH.png' },
-    { id: 15, value: 'G', isFlipped: false, image: '/images/cardG.png' },
-    { id: 16, value: 'H', isFlipped: false, image: '/images/cardH.png' },
+    { id: 1, value: 'A', isFlipped: false, image: '/Images/cardA.png' },
+    { id: 2, value: 'B', isFlipped: false, image: '/Images/cardB.png' },
+    { id: 3, value: 'A', isFlipped: false, image: '/Images/cardA.png' },
+    { id: 4, value: 'B', isFlipped: false, image: '/Images/cardB.png' },
+    { id: 5, value: 'C', isFlipped: false, image: '/Images/cardC.png' },
+    { id: 6, value: 'D', isFlipped: false, image: '/Images/cardD.png' },
+    { id: 7, value: 'C', isFlipped: false, image: '/Images/cardC.png' },
+    { id: 8, value: 'D', isFlipped: false, image: '/Images/cardD.png' },
+    { id: 9, value: 'E', isFlipped: false, image: '/Images/cardE.png' },
+    { id: 10, value: 'F', isFlipped: false, image: '/Images/cardF.png' },
+    { id: 11, value: 'E', isFlipped: false, image: '/Images/cardE.png' },
+    { id: 12, value: 'F', isFlipped: false, image: '/Images/cardF.png' },
+    { id: 13, value: 'G', isFlipped: false, image: '/Images/cardG.png' },
+    { id: 14, value: 'H', isFlipped: false, image: '/Images/cardH.png' },
+    { id: 15, value: 'G', isFlipped: false, image: '/Images/cardG.png' },
+    { id: 16, value: 'H', isFlipped: false, image: '/Images/cardH.png' },
   ]);
 
   const [flippedCards, setFlippedCards] = useState([]);
@@ -115,7 +115,7 @@ function App() {
                 {card.isFlipped ? (
                   <img src={card.image} alt={card.value} />
                 ) : (
-                  <img src="/images/cardBack.png" alt="Card Back" className="card-back" />
+                  <img src={process.env.PUBLIC_URL + '/Images/cardBack.png'} alt="Card Back" className="card-back" />
                 )}
               </div>
             </div>
